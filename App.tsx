@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { eventInfo, introText, mainCommittee, workingCommittee, itinerary, students } from './data';
-import Navigation from './components/Navigation.tsx';
+import Navigation from './Navigation';
 import { Category } from './types';
 import { Search, ChevronDown, ChevronUp, MapPin, Calendar, Clock, User, Award, Cpu, Zap, Activity, Aperture } from 'lucide-react';
 
