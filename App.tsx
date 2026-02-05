@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { eventInfo, introText, mainCommittee, workingCommittee, itinerary, students } from './data';
-import Navigation from './Navigation';
+// Pembetulan: Mengambil terus dari root kerana folder components tiada di GitHub
+import Navigation from './Navigation'; 
 import { Category } from './types';
 import { Search, ChevronDown, ChevronUp, MapPin, Calendar, Clock, User, Award, Cpu, Zap, Activity, Aperture } from 'lucide-react';
+
+// Nota: Import './index.css' telah dibuang kerana fail tersebut tiada dalam repository
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState('home');
