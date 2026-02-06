@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { eventInfo, introText, mainCommittee, workingCommittee, itinerary, students } from './data';
-// Pembetulan: Mengambil terus dari root kerana folder components tiada di GitHub
-import Navigation from './Navigation'; 
+import { eventInfo, introText, mainCommittee, workingCommittee, itinerary, students, pledgeText } from './data';
+import Navigation from './components/Navigation';
 import { Category } from './types';
-import { Search, ChevronDown, ChevronUp, MapPin, Calendar, Clock, User, Award, Cpu, Zap, Activity, Aperture } from 'lucide-react';
-
-// Nota: Import './index.css' telah dibuang kerana fail tersebut tiada dalam repository
+import { Search, ChevronDown, ChevronUp, MapPin, Calendar, Clock, User, Award, Cpu, Zap, Activity, Aperture, FileText, Shield } from 'lucide-react';
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState('home');
@@ -194,7 +191,7 @@ const App: React.FC = () => {
         <div className="h-0.5 w-24 bg-purple-500 mx-auto shadow-[0_0_10px_#a855f7]"></div>
       </div>
 
-      <div className="relative border-l border-cyan-500/30 ml-3 space-y-10">
+      <div className="relative border-l border-cyan-500/30 ml-3 space-y-10 mb-16">
         {itinerary.map((item, idx) => (
           <div key={idx} className="relative pl-8 group">
             {/* Timeline Dot */}
@@ -208,7 +205,7 @@ const App: React.FC = () => {
               ) : (
                 <span className="hidden sm:block sm:w-28"></span>
               )}
-              <span className={`text-slate-200 ${!item.time ? 'text-purple-300 font-bold tracking-wide italic' : 'font-light'}`}>
+              <span className={`text-slate-200 ${!item.time ? 'text-slate-300 font-light text-sm italic pl-4 border-l border-purple-500/30' : 'font-medium'}`}>
                 {item.event}
               </span>
             </div>
@@ -216,7 +213,35 @@ const App: React.FC = () => {
         ))}
       </div>
       
-      <div className="mt-16 relative overflow-hidden rounded-lg p-6 text-center border border-yellow-500/30 bg-yellow-900/10">
+      {/* Pledge Section */}
+      <div className="relative mb-12">
+        <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-cyan-400 rounded-xl blur opacity-20"></div>
+        <div className="relative bg-[#0f172a] border border-slate-700 rounded-xl p-6 overflow-hidden">
+          <div className="flex items-center space-x-3 mb-6 border-b border-slate-700 pb-4">
+             <div className="p-2 bg-purple-900/30 rounded-lg">
+               <Shield className="text-purple-400" size={24} />
+             </div>
+             <div>
+               <h3 className="font-bold text-white text-lg tracking-wider">PROTOCOL: OATH</h3>
+               <p className="text-[10px] text-cyan-400 font-mono tracking-widest">IKRAR PEMIMPIN KECIL SEKOLAH</p>
+             </div>
+          </div>
+          
+          <div className="relative text-center">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-48 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none"></div>
+            <pre className="font-sans text-slate-300 whitespace-pre-line leading-relaxed text-sm relative z-10 font-medium">
+              {pledgeText}
+            </pre>
+          </div>
+          
+          <div className="mt-6 flex justify-between items-center text-[10px] text-slate-500 font-mono border-t border-slate-800 pt-3">
+             <span>SECURE TRANSMISSION</span>
+             <span className="animate-pulse text-green-500">● ENCRYPTED</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="relative overflow-hidden rounded-lg p-6 text-center border border-yellow-500/30 bg-yellow-900/10">
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent opacity-50"></div>
         <p className="text-yellow-200/90 text-sm font-medium italic font-serif tracking-wide relative z-10">
           "Kepimpinan adalah tindakan, bukan kedudukan."
