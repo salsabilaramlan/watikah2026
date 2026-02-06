@@ -4,7 +4,7 @@ export const eventInfo = {
   title: "Majlis Watikah Pelantikan Pemimpin Muda",
   school: "SK Satu Sultan Alam Shah",
   year: "2026",
-  date: "9 Februari 2025",
+  date: "9 Februari 2026", // Telah dikemas kini ke 2026
   day: "Isnin",
   venue: "Dewan Harmoni, SK Satu Sultan Alam Shah",
   theme: "Kepimpinan Berwibawa, Sahsiah Terpuji"
@@ -91,9 +91,8 @@ export const itinerary = [
   { time: "8.30 PAGI", event: "Majlis tamat & Bersurai" },
 ];
 
-// Aggregated Student Data from tables
 export const students: Student[] = [
-  // PENGAWAS SEKOLAH (Sample from page 8-9)
+  // PENGAWAS SEKOLAH
   { id: 1, name: "Dhiya Eryna Insyirah Binti Muhammad Asri", class_name: "3 Cerdas", role: "Pengawas Sekolah", category: Category.Pengawas },
   { id: 2, name: "Muhamad Faiz Bin Roslan", class_name: "3 Cerdas", role: "Pengawas Sekolah", category: Category.Pengawas },
   { id: 3, name: "Nur Aldariya Binti Hazli", class_name: "3 Cerdas", role: "Pengawas Sekolah", category: Category.Pengawas },
@@ -193,7 +192,7 @@ export const students: Student[] = [
   { id: 108, name: "Ahmad Hariz Rayyan Bin Norhasrin", class_name: "4 Setia", role: "Pengawas PPKI", category: Category.PPKI },
   { id: 109, name: "Nur Iman Khairunnisa Binti Aidy Azhar", class_name: "3 Amanah", role: "Pengawas PPKI", category: Category.PPKI },
 
-  // Surau
+  // Pengawas Surau
   { id: 120, name: "Hasya Muqri Bin Muhamad Janatul Naim", class_name: "6 Cerdik", role: "Pengawas Surau", category: Category.Surau },
   { id: 121, name: "Muhammad Izzul Mifzal Bin Mohd Faizal", class_name: "6 Cerdik", role: "Pengawas Surau", category: Category.Surau },
   { id: 122, name: "Aisyah Humaira Binti Azman", class_name: "6 Cerdik", role: "Pengawas Surau", category: Category.Surau },
@@ -243,15 +242,12 @@ export const students: Student[] = [
   { id: 169, name: "Nuraisyah Humaira Binti Mohd Azree", class_name: "4 Cerdik", role: "Pengawas PRS", category: Category.PRS },
 
   // KETUA & PENOLONG KELAS
-  // Tahun 1
   { id: 200, name: "Saiful Imran Bin Saifulzaman", class_name: "1 Cerdas", role: "Ketua Kelas", category: Category.Kelas },
   { id: 201, name: "Nur Khayra Balqis Binti Mohd Rosdi", class_name: "1 Cerdas", role: "Penolong Ketua Kelas", category: Category.Kelas },
   { id: 202, name: "Muhammad Ummar Khaliff Bin Muhammad Ariff", class_name: "1 Cerdik", role: "Ketua Kelas", category: Category.Kelas },
   { id: 203, name: "Nur Dhuha Insyirah Binti Mohd.Hafriz Aqmal", class_name: "1 Cerdik", role: "Penolong Ketua Kelas", category: Category.Kelas },
   { id: 204, name: "Muhammad Adwa Bin Muhammad Azri", class_name: "1 Bahagia", role: "Ketua Kelas", category: Category.Kelas },
   { id: 205, name: "Aaira Inara Binti Othman", class_name: "1 Bahagia", role: "Penolong Ketua Kelas", category: Category.Kelas },
-  
-  // Tahun 2
   { id: 210, name: "Awni Sulaiman Bin Muhd Sufillah", class_name: "2 Cerdas", role: "Ketua Kelas", category: Category.Kelas },
   { id: 211, name: "Aura Tihani Binti Muhamad Tazri", class_name: "2 Cerdas", role: "Penolong Ketua Kelas", category: Category.Kelas },
   { id: 212, name: "Putra Muhammad Mikhail Zydan Bin Mohd Azhar", class_name: "2 Cerdik", role: "Ketua Kelas", category: Category.Kelas },
@@ -262,32 +258,24 @@ export const students: Student[] = [
   { id: 217, name: "Harvey Hernandez Henryrizzi", class_name: "2 Jujur", role: "Penolong Ketua Kelas", category: Category.Kelas },
   { id: 218, name: "Arjuna Zayn Bin Zulfadhli", class_name: "2 Maju", role: "Ketua Kelas", category: Category.Kelas },
   { id: 219, name: "Nur Sufiana Azyan Binti Sufianalinata", class_name: "2 Maju", role: "Penolong Ketua Kelas", category: Category.Kelas },
-
-  // Tahun 3
   { id: 220, name: "Muhammad Hadif Bin Mohamad Husni", class_name: "3 Cerdas", role: "Ketua Kelas", category: Category.Kelas },
   { id: 221, name: "Nor Zafirah Radhiah Binti Mohd Nor Zaidi", class_name: "3 Cerdas", role: "Penolong Ketua Kelas", category: Category.Kelas },
   { id: 222, name: "Muhammad Nur Areez Ilman Bin Saifulnizam", class_name: "3 Cerdik", role: "Ketua Kelas", category: Category.Kelas },
   { id: 223, name: "Nur Aleesya Amni Binti Noorizam", class_name: "3 Cerdik", role: "Penolong Ketua Kelas", category: Category.Kelas },
   { id: 224, name: "Hudzaifah Bin Zulkifli", class_name: "3 Amanah", role: "Ketua Kelas", category: Category.Kelas },
   { id: 225, name: "Aniq Suwaifi Bin Muhd Sufillah", class_name: "3 Amanah", role: "Penolong Ketua Kelas", category: Category.Kelas },
-
-  // Tahun 4
   { id: 230, name: "Aariz Fayyadh Bin Muhammad Dzulazmier", class_name: "4 Cerdas", role: "Ketua Kelas", category: Category.Kelas },
   { id: 231, name: "Zara Izzati Binti Khairul Azmi", class_name: "4 Cerdas", role: "Penolong Ketua Kelas", category: Category.Kelas },
   { id: 232, name: "Muhammad Aqil Izham Bin Mohd Idham", class_name: "4 Cerdik", role: "Ketua Kelas", category: Category.Kelas },
   { id: 233, name: "Rayyan Naufal Bin Muhammad Rauf", class_name: "4 Cerdik", role: "Penolong Ketua Kelas", category: Category.Kelas },
   { id: 234, name: "Adam Muhammad Bin Azril", class_name: "4 Setia", role: "Ketua Kelas", category: Category.Kelas },
   { id: 235, name: "Harris Zafran Bin Azizul Ikram", class_name: "4 Setia", role: "Penolong Ketua Kelas", category: Category.Kelas },
-
-  // Tahun 5
   { id: 240, name: "Putri Nurraisya Ameena Jannah Binti Mohd Azhar", class_name: "5 Cerdas", role: "Ketua Kelas", category: Category.Kelas },
   { id: 241, name: "Qisha Rania Binti Mohd Nordin", class_name: "5 Cerdas", role: "Penolong Ketua Kelas", category: Category.Kelas },
   { id: 242, name: "Aqil Zafran Bin Mohd Saridan", class_name: "5 Cerdik", role: "Ketua Kelas", category: Category.Kelas },
   { id: 243, name: "Nur Damia Aathirah Binti Muhammad Saiful Nizam", class_name: "5 Cerdik", role: "Penolong Ketua Kelas", category: Category.Kelas },
   { id: 244, name: "Muhammad Amsyar Bin Muhammad Asraf", class_name: "5 Adil", role: "Ketua Kelas", category: Category.Kelas },
   { id: 245, name: "Ahmad Ammar Azfar Bin Ahmad Aizat", class_name: "5 Adil", role: "Penolong Ketua Kelas", category: Category.Kelas },
-
-  // Tahun 6
   { id: 250, name: "Nur Huwaynaa Binti Mohamed Hafizee", class_name: "6 Cerdas", role: "Ketua Kelas", category: Category.Kelas },
   { id: 251, name: "Muhammad Harith Bin Mohamad Husni", class_name: "6 Cerdas", role: "Penolong Ketua Kelas", category: Category.Kelas },
   { id: 252, name: "Nur Damia Arissa Binti Mohd Azlan Shah", class_name: "6 Cerdik", role: "Ketua Kelas", category: Category.Kelas },
