@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { eventInfo, introText, mainCommittee, workingCommittee, itinerary, students, pledgeText } from './data';
-import Navigation from './components/Navigation';
+// PEMBETULAN: Memanggil terus dari root
+import Navigation from './Navigation'; 
 import { Category } from './types';
 import { Search, ChevronDown, ChevronUp, MapPin, Calendar, Clock, User, Award, Cpu, Zap, Activity, Aperture, FileText, Shield } from 'lucide-react';
 
@@ -35,9 +36,7 @@ const App: React.FC = () => {
 
   const renderHome = () => (
     <div className="space-y-8 pb-32 animate-fade-in">
-      {/* Futuristic Hero Section */}
       <div className="relative overflow-hidden bg-[#020617] pb-10 rounded-b-[3rem] border-b border-cyan-500/30 shadow-[0_0_30px_rgba(6,182,212,0.15)]">
-        {/* Animated Background Elements */}
         <div className="absolute inset-0 bg-grid-pattern opacity-30"></div>
         <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-600/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
@@ -143,7 +142,6 @@ const App: React.FC = () => {
         <div className="h-0.5 w-24 bg-cyan-500 mx-auto shadow-[0_0_10px_#22d3ee]"></div>
       </div>
       
-      {/* Main Committee Card */}
       <div className="relative group">
         <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
         <div className="relative bg-[#0f172a] rounded-xl overflow-hidden border border-slate-700">
@@ -194,7 +192,6 @@ const App: React.FC = () => {
       <div className="relative border-l border-cyan-500/30 ml-3 space-y-10 mb-16">
         {itinerary.map((item, idx) => (
           <div key={idx} className="relative pl-8 group">
-            {/* Timeline Dot */}
             <span className="absolute -left-[5px] top-1.5 w-[9px] h-[9px] bg-[#020617] border-2 border-cyan-500 rounded-full group-hover:bg-cyan-400 group-hover:shadow-[0_0_10px_#22d3ee] transition-all duration-300"></span>
             
             <div className="flex flex-col sm:flex-row sm:items-baseline bg-[#0f172a]/40 p-4 rounded-xl border border-transparent group-hover:border-cyan-500/20 group-hover:bg-[#0f172a]/60 transition-all">
@@ -213,7 +210,6 @@ const App: React.FC = () => {
         ))}
       </div>
       
-      {/* Pledge Section */}
       <div className="relative mb-12">
         <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-cyan-400 rounded-xl blur opacity-20"></div>
         <div className="relative bg-[#0f172a] border border-slate-700 rounded-xl p-6 overflow-hidden">
@@ -226,14 +222,12 @@ const App: React.FC = () => {
                <p className="text-[10px] text-cyan-400 font-mono tracking-widest">IKRAR PEMIMPIN KECIL SEKOLAH</p>
              </div>
           </div>
-          
           <div className="relative text-center">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-48 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none"></div>
             <pre className="font-sans text-slate-300 whitespace-pre-line leading-relaxed text-sm relative z-10 font-medium">
               {pledgeText}
             </pre>
           </div>
-          
           <div className="mt-6 flex justify-between items-center text-[10px] text-slate-500 font-mono border-t border-slate-800 pt-3">
              <span>SECURE TRANSMISSION</span>
              <span className="animate-pulse text-green-500">● ENCRYPTED</span>
@@ -263,7 +257,6 @@ const App: React.FC = () => {
            </div>
         </div>
         
-        {/* Search Bar */}
         <div className="relative group">
           <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
           <input
@@ -276,7 +269,6 @@ const App: React.FC = () => {
           <Search className="absolute left-4 top-3.5 text-cyan-500 z-10" size={18} />
         </div>
 
-        {/* Filter Chips */}
         <div className="flex overflow-x-auto pb-4 space-x-2 no-scrollbar mask-gradient">
           <button
             onClick={() => setSelectedCategory('All')}
@@ -319,7 +311,6 @@ const App: React.FC = () => {
                 {list.map((student) => (
                   <div key={student.id} className="group bg-[#0f172a]/50 p-4 rounded-r-xl border-l-2 border-l-slate-600 border-y border-r border-y-slate-800 border-r-slate-800 hover:border-l-cyan-400 hover:bg-[#1e293b]/80 transition-all duration-300 flex items-center space-x-4 relative overflow-hidden">
                     <div className="absolute right-0 top-0 w-16 h-full bg-gradient-to-l from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    
                     <div className="bg-slate-800 p-2.5 rounded-lg flex-shrink-0 border border-slate-700 group-hover:border-cyan-500/50 group-hover:shadow-[0_0_10px_rgba(34,211,238,0.2)] transition-all">
                       <User size={18} className="text-slate-400 group-hover:text-cyan-400 transition-colors" />
                     </div>
@@ -356,11 +347,7 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#020617] max-w-md mx-auto shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-hidden relative font-sans text-slate-200">
-      
-      {/* Background Grid Fixed */}
       <div className="fixed inset-0 bg-grid-pattern opacity-20 pointer-events-none max-w-md mx-auto"></div>
-
-      {/* Header Sticky */}
       {activeTab !== 'home' && (
         <div className={`sticky top-0 z-40 bg-[#020617]/80 backdrop-blur-md border-b border-cyan-500/20 transition-all duration-300 ${isScrolled ? 'shadow-[0_4px_20px_rgba(0,0,0,0.4)]' : ''}`}>
           <div className="px-4 h-16 flex items-center justify-between">
@@ -372,15 +359,12 @@ const App: React.FC = () => {
           </div>
         </div>
       )}
-
-      {/* Main Content */}
       <main className="w-full relative z-10">
         {activeTab === 'home' && renderHome()}
         {activeTab === 'committee' && renderCommittee()}
         {activeTab === 'schedule' && renderSchedule()}
         {activeTab === 'students' && renderStudents()}
       </main>
-
       <Navigation activeTab={activeTab} setActiveTab={setActiveTab} />
     </div>
   );
