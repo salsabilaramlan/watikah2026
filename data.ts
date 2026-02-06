@@ -26,6 +26,18 @@ export const introText = {
   ]
 };
 
+export const pledgeText = `BAHAWASANYA KAMI,
+PENGAWAS-PENGAWAS,
+DAN PEMIMPIN-PEMIMPIN KECIL
+SEKOLAH KEBANGSAAN SATU SULTAN ALAM SHAH,
+BERIKRAR,
+AKAN MENJALANKAN TUGAS,
+DENGAN PENUH TANGGUNGJAWAB,
+SERTA AKAN BERSIKAP AMANAH DAN JUJUR,
+KEPADA GURU-GURU DAN PIHAK SEKOLAH,
+DEMI MENJAMIN KEBAIKAN,
+DAN MENJAGA NAMA BAIK SEKOLAH INI.`;
+
 export const mainCommittee: CommitteeGroup = {
   name: "Jawatankuasa Induk",
   members: [
@@ -68,12 +80,15 @@ export const workingCommittee: CommitteeGroup[] = [
 ];
 
 export const itinerary = [
-  { time: "8.00 PAGI", event: "Bacaan Doa" },
-  { time: "", event: "Ucapan Aluan Tuan Guru Besar" },
-  { time: "8.30 PAGI", event: "Penyampaian Watikah Pelantikan" },
-  { time: "9.30 PAGI", event: "Bacaan Ikrar Pemimpin Sekolah" },
-  { time: "9.45 PAGI", event: "Sesi Bergambar" },
-  { time: "10.00 PAGI", event: "Bersurai" },
+  { time: "7.30 PAGI", event: "Semua murid dan guru berkumpul" },
+  { time: "7.40 PAGI", event: "Perhimpunan rasmi (Nyanyian & Doa)" },
+  { time: "7.50 PAGI", event: "Ucapan Guru Besar" },
+  { time: "8.00 PAGI", event: "Majlis Watikah Pelantikan bermula" },
+  { time: "", event: "• Pengawas dipanggil ke hadapan" },
+  { time: "", event: "• Penyerahan watikah pelantikan" },
+  { time: "8.15 PAGI", event: "Bacaan Ikrar Pengawas" },
+  { time: "8.20 PAGI", event: "Sesi fotografi" },
+  { time: "8.30 PAGI", event: "Majlis tamat & Bersurai" },
 ];
 
 // Aggregated Student Data from tables
